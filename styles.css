@@ -1,7 +1,11 @@
 :root {
     /* Color variable */
-    --background-color: #3941d3;
-    --text-color: #3b3b3b;
+    --light-background-color: #d0fbc7;
+    --light-text-color: #3b3b3b;
+    --dark-background-color: #121212;
+    --dark-text-color: #fafafa;
+    --light-text-box-color: white;
+    --dark-text-box-color: grey;
     --accent-color: #a3c4f3;
     --accent-color-2: #ffcfe1;
     --surface-color: #ffffff;
@@ -12,8 +16,9 @@
 }
 
 :root {
-    background-color: var(--background-color, white);
-    color: var(--text-color, black);
+    color-scheme: light dark;
+    --primary-color: light-dark(var(--text-color, black);, #fafafa);
+    --primary-background: light-dark(var(--background-color, white);, #121212)
 }
 
 html{
@@ -26,9 +31,11 @@ html{
 
 body {
     font-family: "Quicksand", sans-serif;
-    border: 6px solid #000000; 
+    border: 6px solid black; 
+    border-radius: var(--radius-size, 12px);
     padding: 14px;  
-    background-color: var(--accent-color, white);
+    color: light-dark(var(--light-text-color, black), var(--dark-text-color, white));
+    background-color: light-dark(var(--light-background-color, white), var(--dark-background-color, black));
 }
 
 .timeline{
@@ -58,10 +65,10 @@ body {
     animation-delay: 0.1s;
 }
 .container:nth-child(2){
-    animation-delay: 1s;
+    animation-delay: 1.2s;
 }
 .container:nth-child(3){
-    animation-delay:2s;
+    animation-delay:2.2s;
 }
 .container:nth-child(4){
     animation-delay: 3s;
@@ -69,12 +76,14 @@ body {
 
 .text-box{
     padding: 20px 30px;
-    background-color: #ffffff;
+    background-color: light-dark(var(--light-text-box-color, white), var(--dark-text-box-color, black));
+    color: light-dark(var(--light-text-color, black), var(--dark-text-color, white));
     position: relative;
     border-radius: 6px;
+    border: 1px solid black;
     font-size: 14px;
     & h3{
-        color: black;
+        color: light-dark(var(--light-text-color, black), var(--dark-text-color, white));;
     }
     & small{
         display: inline-block;
@@ -86,7 +95,7 @@ body {
 }
 .text-box:hover{
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px black;
+    box-shadow: 0 10px 20px light-dark(var(--light-text-color, black), var(--dark-text-color, white));;
 }
 
 .left-container{
@@ -98,7 +107,7 @@ body {
 .container img{
     position: absolute;
     width: 40px;
-    border-radius: 50%;
+    border-radius: 50% ;
     right: -20px;
     top: 32px;
     z-index: 10;
@@ -112,7 +121,7 @@ body {
     position: absolute;
     width: 6px;
     height: 100%;
-    background: #ffffff;
+    background: light-dark(white, grey);
     top: 0;
     left: 50%;
     margin-left: -3px;
@@ -137,7 +146,7 @@ body {
     z-index: 1;
     border-top: 14px solid transparent;
     border-bottom: 14px solid transparent;
-    border-left: 14px solid white;
+    border-left: 14px solid light-dark(white, grey);
     right: -14px;
 }
 .right-container-arrow{
@@ -148,7 +157,7 @@ body {
     z-index: 1;
     border-top: 14px solid transparent;
     border-bottom: 14px solid transparent;
-    border-right: 14px solid white;
+    border-right: 14px solid light-dark(white, grey);
     left: -14px;
 }
 
@@ -177,7 +186,7 @@ body {
         left: 10px;
     }
     .left-container-arrow, .right-container-arrow{
-        border-right: 15px solid #ffffff;
+        border-right: 15px solid light-dark(white, grey);
         border-left: 0;
         left: -14px;
     }.container video{
@@ -197,7 +206,7 @@ header , footer{
 }
 
 img, video, input, textarea, section, article, nav, progress, dialog {
-    border-radius: var(--radius-size);
+    border-radius: var(--radius-size, 12px);
 }
 
 img {
@@ -220,8 +229,9 @@ nav a{
 }
 nav a:hover{
     transform: translateY(-5px);
-    box-shadow: 0 5px 40px black;
-    color: black;
+    box-shadow: 0 5px 40px light-dark(black, white);
+    color: light-dark(black, white);
+    font-style: italic;
 }
 
 h1, h2, h3, h4 {
