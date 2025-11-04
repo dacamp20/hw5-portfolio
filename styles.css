@@ -11,6 +11,9 @@
     --surface-color: #ffffff;
     --border-color: #e6e6e6;
 
+    --wide-gamut-color: color(display-p3, 1 0.75 0.95);
+    --purple-color-mix: color-mix(in srgb, red 50%, blue 50%);
+
     /*rounded corner scale*/
     --radius-size: 12px;
 }
@@ -34,6 +37,59 @@ body {
     padding: 14px;  
     color: light-dark(var(--light-text-color, black), var(--dark-text-color, white));
     background-color: light-dark(var(--light-background-color, white), var(--dark-background-color, black));
+}
+
+main, header, footer {
+    max-width: 2400px;
+    margin: auto;
+    padding: 1rem 0;
+}
+
+header , footer{
+    min-height: 4dvh;
+    text-align: center;
+}
+
+video, input, textarea, section, article, nav, progress, dialog {
+    border-radius: var(--radius-size, 12px);
+}
+video{
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    background-color: black;
+}
+figure img{
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 4px solid light-dark(var(--light-text-color, black), var(--dark-text-color, white));
+    height: auto;
+}
+
+nav ul { 
+    max-width: max-content;
+    font-size: clamp(0.7rem, 2dvw, 1.5rem);
+    list-style: none; 
+    display: flex;
+    justify-content: center;
+    gap: 1rem; 
+    padding: 0; 
+    margin: auto;
+}
+nav a{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+nav a:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 5px 40px light-dark(black, purple);
+    color: light-dark(black, var(--purple-color-mix, purple));
+    font-style: italic;
+}
+
+h1, h2, h3, h4 {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
 }
 
 /*Timeline animation on projects page*/
@@ -253,66 +309,18 @@ body {
     }
     nav ul{
         flex-direction: column;
-        gap: 0.25rem;
+        gap: 1.25rem;
     }
 }
 
-main, header, footer {
-    max-width: 2400px;
-    margin: auto;
-    padding: 1rem 0;
+/*extra credit*/
+div:has(profile-card){
+    background-color: green;
 }
-
-header , footer{
-    min-height: 4dvh;
-    text-align: center;
-}
-
-video, input, textarea, section, article, nav, progress, dialog {
-    border-radius: var(--radius-size, 12px);
-}
-
-video{
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-    background-color: black;
-}
-figure img{
-    object-fit: cover;
-    object-position: center;
-    border-radius: 50%;
-    border: 4px solid light-dark(var(--light-text-color, black), var(--dark-text-color, white));
-    height: auto;
-}
-
-nav ul { 
-    max-width: max-content;
-    font-size: clamp(0.7rem, 2dvw, 1.5rem);
-    list-style: none; 
-    display: flex;
-    justify-content: center;
-    gap: 1rem; 
-    padding: 0; 
-    margin: auto;
-}
-nav a{
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-nav a:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 5px 40px light-dark(black, white);
-    color: light-dark(black, var(--purple-color-mix, purple));
-    font-style: italic;
-}
-
-h1, h2, h3, h4 {
-    color: var(--text-color);
-    margin-bottom: 0.5rem;
-}
-
 profile-card { 
     display: block; 
     padding: 4px; 
-    border: 10px dashed red;
+    border: 10px dashed var(--wide-gamut-color, blue); /*using wide gamut color()*/
+    border: 20px dashed var(--purple-color-mix, red); /*fallback if wide gamut color not available using color-mix()*/
+
 }
