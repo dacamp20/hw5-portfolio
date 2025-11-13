@@ -259,6 +259,19 @@ textarea:focus{
     outline: none;
     box-shadow: 0 0 8px black;
 }
+output {
+    display: block;
+    margin: 20px 0;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: light-dark(lightgrey , white);
+}
+.error-message {
+    color: red;
+}
+.info-message {
+    color: blue;
+}
 
 .contact-info{
     text-align: left;
