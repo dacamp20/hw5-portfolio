@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project-CardsPage</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <script src="theme.js"></script>
+
+</head>
+
+
+<body>
+    <header>
+        <div class="theme-toggle-container">
+            <label for="themeToggle" class="theme-toggle-label">Thanksgiving Theme</label>
+            <label class="switch">
+                <input type="checkbox" id="themeToggle" name="themeToggle" onclick="toggleTheme()">
+                <span class="slider"></span>
+            </label>
+            <noscript>
+                <p style="color: red; font-weight: bold;">
+                    Using system default theme. Theme toggle requires JavaScript.
+                </p>
+            </noscript>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="project-cards.html">Project-Cards</a></li>
+                 
+            </ul>
+        </nav>
+
+        <h1>Project-Cards</h1>
+    </header>
+
+    <main>
+        <section id="projectCardList" class="grid-layout">
+            <project-card
+                title="CSE Educational Studies Portfolio"
+                date="Fall 2024"
+                course="EDS 124BR"
+                img="edsPortfolioSS.jpg"
+                alt="Screen shot of my published eds portfolio site"
+                desc="Built an educational Google Sites portfolio including videos where I explain coding programs to demonstrate understanding and teaching ability."
+                link="https://sites.google.com/view/danielsedsportfolio/home"
+            ></project-card>
+            <project-card
+                title="Habitizer Android App"
+                date="Winter 2025"
+                course="CSE 110"
+                img="androidStudioLogo.png"
+                alt="Habitizer Android app icon"
+                desc="Team-built Android app for habit tracking using Java, MVP architecture, Strategy & Observer patterns, GitHub CI, and agile workflow."
+                link="https://github.com/CSE-110-Winter-2025/habitizer-team-19/tree/master/lib"
+            ></project-card>
+        </section>       
+
+        <script src="project-card.js"></script>
+        <script src="project-card-list.js"></script>
+    </main>
+
+</body>
+</html>

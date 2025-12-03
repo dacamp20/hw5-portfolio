@@ -114,6 +114,13 @@ h1, h2, h3, h4 {
     margin-bottom: 0.5rem;
 }
 
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
 /*Timeline animation on projects page*/
 .timeline{
     position: relative;
