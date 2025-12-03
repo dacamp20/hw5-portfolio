@@ -121,6 +121,76 @@ h1, h2, h3, h4 {
     padding: 2rem;
 }
 
+/* Controls section for load local/remote*/
+.controls {
+    background-color: light-dark(var(--light-text-box-color, white), var(--dark-text-box-color, grey));
+    border-radius: var(--radius-size, 12px);
+    padding: 1.5rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    text-align: center;
+}
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.load-btn {
+    background-color: light-dark(blue , blue);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: "Quicksand", sans-serif;
+}
+.load-btn:hover {
+    background-color: light-dark(#3182ce, #3182ce);
+    transform: translateY(-2px);
+}
+.load-btn:active {
+    transform: translateY(0);
+}
+.load-btn.secondary {
+    background-color: light-dark(green, green);
+}
+.load-btn.secondary:hover {
+    background-color: light-dark(rgb(80, 148, 80), rgb(80, 148, 80));
+}
+/* Status messages */
+.status-message {
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.status-message.success {
+    background-color: lightgreen;
+    color: green;
+    border: 1px solid #9ae6b4;
+}
+.status-message.error {
+    background-color: pink;
+    color: red;
+    border: 1px solid #fc8181;
+}
+.status-message.loading {
+    background-color: #bee3f8;
+    color: #2a4365;
+    border: 1px solid #90cdf4;
+}
+.status-message.info {
+    background-color: white;
+    color: black;
+    border: 1px solid #cbd5e0;
+}
+
 /*Timeline animation on projects page*/
 .timeline{
     position: relative;
@@ -585,6 +655,18 @@ output {
     }
     .contact-wrapper{
         grid-template-columns: 1fr;
+    }
+    .controls {
+        padding: 1rem;
+        margin: 1rem;
+    }
+    .button-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .load-btn {
+        width: 100%;
+        padding: 0.8rem;
     }
 }
 

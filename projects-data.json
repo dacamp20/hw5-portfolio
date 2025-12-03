@@ -1,0 +1,38 @@
+[
+  {
+    "title": "CSE Educational Studies Portfolio",
+    "date": "Fall 2024",
+    "course": "EDS 124BR",
+    "img": "edsPortfolioSS.jpg",
+    "alt": "Screen shot of my published eds portfolio site",
+    "desc": "Built an educational Google Sites portfolio including videos where I explain coding programs to demonstrate understanding and teaching ability.",
+    "link": "https://sites.google.com/view/danielsedsportfolio/home"
+  },
+  {
+    "title": "Habitizer Android App",
+    "date": "Winter 2025",
+    "course": "CSE 110",
+    "img": "androidStudioLogo.png",
+    "alt": "Android Studio icon",
+    "desc": "Team-built Android app with Android Studio for habit tracking using Java, MVP architecture, Strategy & Observer patterns, GitHub CI, and agile workflow.",
+    "link": "https://github.com/CSE-110-Winter-2025/habitizer-team-19/tree/master/lib"
+  },
+  {
+    "title": "3D Graphics Renderer",
+    "date": "Winter 2025",
+    "course": "CSE 167",
+    "img": "167scene.png",
+    "alt": "A scene of a sphere in a box I built for my 3D graphics project",
+    "desc": "Built a real-time renderer with 3D transformations, camera projection, and Phong shading using OpenGL.",
+    "link": "#"
+  },
+  {
+    "title": "Digital Systems Projects",
+    "date": "Spring 2025",
+    "course": "CSE 140L",
+    "img": "waveform.jpg",
+    "alt": "Screen shot of the modelSim waveform for my digital systems project",
+    "desc": "Designed and simulated FSM-based hardware circuits for programmable clock and traffic signal systems using SystemVerilog.",
+    "link": "#"
+  }
+]

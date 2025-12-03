@@ -44,29 +44,21 @@
     </header>
 
     <main>
+        <section class="controls">
+            <div class="button-container">
+                <button id="loadLocal" class="load-btn">Load Local</button>
+                <button id="loadRemote" class="load-btn">Load Remote</button>
+                <button id="clearStorage" class="load-btn secondary">Clear Storage</button>
+                <button id="saveToLocal" class="load-btn secondary">Save to Local</button>
+            </div>
+            <div id="statusMessage" class="status-message"></div>
+        </section>
+
         <section id="projectCardList" class="grid-layout">
-            <project-card
-                title="CSE Educational Studies Portfolio"
-                date="Fall 2024"
-                course="EDS 124BR"
-                img="edsPortfolioSS.jpg"
-                alt="Screen shot of my published eds portfolio site"
-                desc="Built an educational Google Sites portfolio including videos where I explain coding programs to demonstrate understanding and teaching ability."
-                link="https://sites.google.com/view/danielsedsportfolio/home"
-            ></project-card>
-            <project-card
-                title="Habitizer Android App"
-                date="Winter 2025"
-                course="CSE 110"
-                img="androidStudioLogo.png"
-                alt="Habitizer Android app icon"
-                desc="Team-built Android app for habit tracking using Java, MVP architecture, Strategy & Observer patterns, GitHub CI, and agile workflow."
-                link="https://github.com/CSE-110-Winter-2025/habitizer-team-19/tree/master/lib"
-            ></project-card>
         </section>       
 
         <script src="project-card.js"></script>
-        <script src="project-card-list.js"></script>
+        <script src="data-manager.js"></script>
     </main>
 
 </body>
