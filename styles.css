@@ -120,8 +120,146 @@ h1, h2, h3, h4 {
     gap: 2rem;
     padding: 2rem;
 }
+/* CRUD Page Styles */
+.crud-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1400px; 
+    margin: 0 auto;
+}
+.crud-forms, .project-list {
+    background-color: light-dark(var(--light-text-box-color, white), var(--dark-text-box-color, grey));
+    border-radius: var(--radius-size, 12px);
+    padding: 2rem;
+    color: light-dark(var(--light-text-color, black), var(--dark-text-color, white));
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: light-dark(var(--light-text-color, black), var(--dark-text-color, white));
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 8px;
+    background-color: light-dark(var(--light-input-box-color, white), var(--dark-input-box-color, #333));
+    color: black;
+    font-family: "Quicksand", sans-serif;
+    font-size: 1rem;
+}
+.form-group small {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.85rem;
+    color: light-dark(var(--light-text-color, black), var(--dark-text-color, white));
+}
+.form-buttons,.btn-small {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+.btn-primary, .btn-secondary, .btn-danger, .btn-small {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: "Quicksand", sans-serif;
+    color: white;
+}
+.btn-primary {
+    background-color: light-dark(blue , blue);
+}
+.btn-primary:hover {
+    background-color: light-dark(#3182ce, #3182ce);
+    transform: translateY(-2px);
+}
+.btn-primary:active {
+    transform: translateY(0);
+}
+.btn-secondary {
+    background-color: light-dark(green, green);
+}
+.btn-secondary:hover {
+    background-color: light-dark(rgb(80, 148, 80), rgb(80, 148, 80));
+}
+.btn-danger {
+    background-color: light-dark(#c53030, red);
+    color: white;
+}
+.btn-danger:hover {
+    background-color: light-dark(#9b2c2c, pink);
+}
+.btn-small {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    background-color: orange;
+}
+.list-container {
+    margin: 1.5rem 0;
+    max-height: 700px;
+    overflow-y: auto;
+}
+.project-item {
+    background-color: light-dark(#f7fafc, #2d3748);
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid light-dark(#e2e8f0, #4a5568);
+}
+.project-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+}
+.project-item-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: light-dark(var(--light-text-color, black), var(--dark-text-color, white));
+}
+.project-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+.project-item-details p {
+    margin: 0.5rem 0;
+    color: light-dark(#4a5568, #cbd5e0);
+}
+/*
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+    */
+.empty-message {
+    text-align: center;
+    padding: 2rem;
+    color: light-dark(var(--light-text-color, black), var(--dark-text-color, white));
+    font-style: italic;
+}
+.list-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.status-area {
+    min-height: 50px;
+    margin-top: 1rem;
+}
 
-/* Controls section for load local/remote*/
+
+
+
+/* Controls section for load local/remote for project-card page */
 .controls {
     background-color: light-dark(var(--light-text-box-color, white), var(--dark-text-box-color, grey));
     border-radius: var(--radius-size, 12px);
@@ -594,6 +732,15 @@ output {
             margin-bottom: 12px;
         }
     }
+    .crud-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+    
+    .crud-forms, .project-list {
+        padding: 1.5rem;
+    }
 }
 
 /*Phone: 0px-767px*/
@@ -667,6 +814,29 @@ output {
     .load-btn {
         width: 100%;
         padding: 0.8rem;
+    }
+
+
+    .crud-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+    .crud-forms, .project-list {
+        padding: 1.5rem;
+    }
+    .project-item-header {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .project-actions {
+        align-self: flex-end;
+    }
+    .form-buttons, .list-actions {
+        flex-direction: column;
+    }
+    .btn-primary, .btn-secondary, .btn-danger {
+        width: 100%;
     }
 }
 
