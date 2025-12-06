@@ -15,6 +15,7 @@
 
 <body>
     <header>
+        <!--
         <div class="theme-toggle-container">
             <label for="themeToggle" class="theme-toggle-label">Thanksgiving Theme</label>
             <label class="switch">
@@ -27,6 +28,7 @@
                 </p>
             </noscript>
         </div>
+        -->
 
         <nav>
             <button class="menu-toggle" aria-label="Toggle navigation menu">
@@ -34,9 +36,7 @@
             </button>
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
                 <li><a href="projects.html">Projects Timeline</a></li>
-                <li><a href="resume.html">Resume</a></li>
                 <li><a href="form-with-js.html">Contact</a></li>
                 <li><a href="project-cards.html">Project-Cards</a></li>  
                 <li><a href="crud.html">Manage Cards</a></li>
@@ -47,20 +47,146 @@
     </header>
 
     <main>
-        <hgroup>
-            <h2>Who am I</h2>
-            <p>I am Daniel, a Computer Science major interested in software dev, web dev, and cyber security.</p>
+        <section class="hero">
+            <section class="hero-content">
+                <div class="hero-text">
+                    <h2>Computer Science Student & Developer</h2>
+                    <p class="tagline">First-generation UCSD student passionate about software engineering, web development, and cybersecurity</p>
+                    <div class="hero-links">
+                        <a href="https://github.com/dacamp20" class="hero-btn">GitHub</a>
+                        <a href="https://www.linkedin.com/in/daniel-campuzano-936391319" class="hero-btn">LinkedIn</a>
+                        <a href="danielCresume.pdf" download class="hero-btn">Download Resume</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <figure>
+                        <img src="IMG_5582.jpg" height="400" width="400" loading="lazy" alt="Daniel smiling at camera in profile photo">
+                        <figcaption><strong>Daniel Campuzano</strong> - UCSD Computer Science</figcaption>
+                    </figure>
+                </div>
+            </section>
+        </section>
 
-        <section>
-            <h3>Site Progress</h3>
-            <p>Project completion progess:</p>
-            <progress value="50" max="100">50%</progress>
+        <!-- About Section -->
+        <section class="about-section">
+            <h2>About Me</h2>
+            <section class="about-content">
+                <article class="about-card">
+                    <h3>Background</h3>
+                    <p>I'm a proud first-generation college student at UCSD pursuing a Bachelor of Science in Computer Science. My favorite courses include Software Engineering, Computer Security, and Web Development.</p>
+                    <p>Expected Graduation: <strong>June 2026</strong></p>
+                    <p>GPA: <strong>3.60</strong></p>
+                </article>
+                
+                <article class="about-card">
+                    <h3>Skills & Technologies</h3>
+                    <section class="skills-grid">
+                        <div class="skill-category">
+                            <h4>Languages</h4>
+                            <ul>
+                                <li>Python</li>
+                                <li>Java</li>
+                                <li>C/C++</li>
+                                <li>System Verilog</li>
+                                <li>JavaScript/HTML/CSS</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Tools & Frameworks</h4>
+                            <ul>
+                                <li>Android Studio</li>
+                                <li>JUnit</li>
+                                <li>Git/GitHub</li>
+                                <li>OpenGL</li>
+                                <li>ModelSim/Quartus</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <p class="language-note"><strong>Bilingual:</strong> English & Spanish</p>
+                </article>
+                
+                <article class="about-card">
+                    <h3>Personal Traits</h3>
+                    <p>I would describe myself as <em>goal-oriented, empathetic, analytical, friendly, and open-minded</em>. I enjoy collaborating with teams, solving complex problems, and continuously learning new technologies.</p>
+                    <p>Outside of coding, I like hanging out with friends, attending sporting events, and working on personal skill development.</p>
+                </article>
+            </section>
+        </section>
+
+        <!-- Education & Experience Section -->
+        <section class="experience-section">
+            <h2>Education & Experience</h2>
+            <section class="experience-content">
+                <article class="experience-card">
+                    <h3>Education</h3>
+                    <h4>University of California, San Diego</h4>
+                    <p><strong>Bachelor of Science in Computer Science</strong></p>
+                    <p>La Jolla, CA | Expected Graduation: June 2026</p>
+                    
+                    <div class="coursework">
+                        <h5>Relevant Coursework:</h5>
+                        <ul>
+                            <li>Operating Systems</li>
+                            <li>Software Engineering</li>
+                            <li>Data Structures & Algorithms</li>
+                            <li>Computer Graphics</li>
+                            <li>Computer Security</li>
+                            <li>Theory of Computation</li>
+                            <li>Digital Systems</li>
+                            <li>Probability & Statistics</li>
+                        </ul>
+                    </div>
+                </article>
+                
+                <article class="experience-card">
+                    <h3>Work Experience</h3>
+                    <h4>Target - Fulfillment Specialist</h4>
+                    <p><em>Escondido, CA | July 2022 - Present</em></p>
+                    <ul>
+                        <li>Fulfill and organize online orders in a fast-paced retail environment</li>
+                        <li>Maintain inventory accuracy and assist customers bilingually (English/Spanish)</li>
+                        <li>Work cross-functionally across merchandise, cashier, and shipment teams</li>
+                        <li>Develop strong organizational and time management skills</li>
+                    </ul>
+                </article>
+                
+                <article class="experience-card">
+                    <h3>Career Goals</h3>
+                    <p>I'm seeking software engineering internship opportunities where I can apply my technical skills, learn from experienced developers, and contribute to meaningful projects.</p>
+                    <p>Interested in: <strong>Front-end Development, Cybersecurity, and Software Engineering</strong></p>
+                    <a href="form-with-js.html" class="cta-btn">Contact Me About Opportunities</a>
+                </article>
+            </section>
+        </section>
+
+        <!-- Quick Stats Section -->
+        <section class="stats-section">
+            <h2>At a Glance</h2>
+            <section class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">3.60</div>
+                    <div class="stat-label">GPA</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">2026</div>
+                    <div class="stat-label">Graduation Year</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Programming Languages</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">Major Projects</div>
+                </div>
+            </section>
         </section>
 
     </main>
 
     <footer>
         <p>Find me on <a href="https://www.linkedin.com/in/daniel-campuzano-936391319">LinkedIn</a> and <a href="https://github.com/dacamp20">Github</a></p>
+        <p>Email: dancampu26@gmail.com</p>
         <noscript>Please enable JavaScript for best experience.</noscript>
     </footer>
 

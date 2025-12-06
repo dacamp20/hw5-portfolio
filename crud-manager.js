@@ -148,8 +148,8 @@ function renderProjectList() {
             <div class="project-item-header">
                 <h3>${project.title}</h3>
                 <div class="project-actions">
-                    <button class="btn-small edit-btn" data-index="${index}">Edit</button>
-                    <button class="btn-small delete-btn" data-index="${index}">Delete</button>
+                    <button class="btn-small edit-btn" id="edit-btn" data-index="${index}">Edit</button>
+                    <button class="btn-small delete-btn" id="delete-btn"data-index="${index}">Delete</button>
                 </div>
             </div>
             <div class="project-item-details">
